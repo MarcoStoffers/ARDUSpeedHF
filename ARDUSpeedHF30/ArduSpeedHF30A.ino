@@ -1,5 +1,5 @@
 /* -----------------------------------------------------------------------
-** ArduSpeedHF 30A V0.1 - Speedcontroller for brushed Motors based on 
+** ArduSpeedHF 30A V0.2 - Speedcontroller for brushed Motors based on 
 ** SimonK 30A ESC at aliexpress.com (Hobbypower 30A)
 **
 ** based on the "MiniCore" https://github.com/MCUdude/MiniCore
@@ -39,13 +39,13 @@
 **
 ** LiPo analog read values
 ** ------------------------
-** 2S low (6,6V) = 120
-** 2S mid (7,4V) = 135
-** 2S high (8,4V) = 160
-** 3S low (9,9V) = 180
-** 3S mid (11,1V) = 205
-** 3S high (12,6V) = 235
-*  LiPo Limit (13V) = 250
+** 2S low (6,6V) = 230
+** 2S mid (7,4V) = 260
+** 2S high (8,4V) = 295
+** 3S low (9,9V) = 345
+** 3S mid (11,1V) = 390
+** 3S high (12,6V) = 445
+*  LiPo Limit (13V) = 500
 **
 ** Author: M.Stoffers
 ** Year: 2019
@@ -75,13 +75,13 @@
 
 #define RC_PIN 2
 
-#define lipo_2s_low 120
-#define lipo_2s_mid 135
-#define lipo_2s_high 160
-#define lipo_3s_low 180
-#define lipo_3s_mid 205
-#define lipo_3s_high 235
-#define lipo_limit 250
+#define lipo_2s_low 230
+#define lipo_2s_mid 260
+#define lipo_2s_high 295
+#define lipo_3s_low 345
+#define lipo_3s_mid 390
+#define lipo_3s_high 445
+#define lipo_limit 500
 
 #define between(x, a, b)  (((a) <= (x)) && ((x) <= (b)))
 // -----------------------------
@@ -126,6 +126,8 @@ boolean lipo_check = false;
 // Setup
 // -----------------------------
 void setup() {
+    analogReference(INTERNAL);                                                              // first set ADC Reference to internal 2.56V
+    
     for(helper = 0; helper < 6; helper++) {                                                 // set all MosFET Pins ...
       pinMode(pin_array[helper], OUTPUT);                                                   // ... as Output ...
       digitalWrite(pin_array[helper], LOW);                                                 // ...  and to LOW
