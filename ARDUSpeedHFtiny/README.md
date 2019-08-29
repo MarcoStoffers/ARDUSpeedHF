@@ -1,4 +1,4 @@
-![ARDUSpeedHF](https://marcostoffers.github.io/arduspeedhftiny_logo_640.jpg)
+![ARDUSpeedHF](https://marcostoffers.github.io/arduspeedhftiny_logo_640.png)
 ## Arduino Sketch for the HobbyKing 6A & 10A UBEC ESC
 ![HobbyKing UBEC 20A](https://marcostoffers.github.io/hk10a.jpg)
 
