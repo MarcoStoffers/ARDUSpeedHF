@@ -1,4 +1,4 @@
-![ARDUSpeedHF30](https://marcostoffers.github.io/arduspeedhf30logo640.jpg)
+![ARDUSpeedHF30](https://marcostoffers.github.io/arduspeedhf30logo640.png)
 ## Arduino Sketch for the NoName 30A ESC für 3$
 ![NoName ESC 30A](https://marcostoffers.github.io/simonk30a.jpg)
 
