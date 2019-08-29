@@ -1,4 +1,4 @@
-# ARDUSpeedHF
+![ARDUSpeedHF](https://marcostoffers.github.io/arduspeedhf_logo_640.jpg)
 ## Arduino Sketch for the HobbyKing 20A & 30A UBEC ESC
 ![HobbyKing UBEC 20A](https://marcostoffers.github.io/hk20a.jpg)
 
@@ -21,8 +21,17 @@ To setup the new programmed ESC to your RC you need to do the following steps:
 * decide if you want LiPo protect On or Off (2S -3S). For LiPo protect on bring the stick to full forward, for off to full reverse - wait for a beep
 * bring the stick in the middle position. You will here 2 long Motorbeeps as a sign, that all values are stored in the internal EEPROM.
 
-You can now use your new brushed ESC (no reboot required)
+You can now use your new brushed ESC (no reboot required).
 
+LiPo voltages:
+* 2S LiPo fully charged = 8.4V
+* 2S LiPo normal voltage = 7.4V
+* 2S LiPo cutoff voltage = 6.6V
+
+* 3S LiPo fully charged = 12.6V
+* 3S LiPo normal voltage = 11.1V
+* 3S LiPo cutoff voltage = 9.9V
+ 
 ## License
 The project is licensed under the Creative Common License. A rebuild for private or non-profit associations is desired, commercial rebuild or distribution I forbid. If someone should develop the mixer further, I ask for the naming of the original project.
 
