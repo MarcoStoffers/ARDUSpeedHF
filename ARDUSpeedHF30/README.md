@@ -11,7 +11,7 @@ This sketch is for the 30A, red wrapped ESC you can find on eBay or Aliexpress f
 ## Attention
 The microcontroller ATmega8 is powered via an old 78L05 LDO. This type needs more than 6.7V (better 7V) to generate the 5V for the ATmega. So if you want to power the system with a 2S LiPo, be sure to use an external LiPo monitor, because the LDO will break down the voltage before the LiPo reaches the cut off voltage! You can change this by using a better LDO in SOT-89 housing (f.e. LD2981ABU50TR)
 
-[EDIT] See new version 0.2 where I used the internal 2.45V voltage reference for the ADC. This is a little bit more stable and working with my device.
+[EDIT] See new version 0.2 where I use the internal 2.56V voltage reference for the ADC. This is a little bit more stable and so a working LiPo cutoff for 2S.
 
 ## Setup
 To setup the new programmed ESC to your RC you need to do the following steps:
