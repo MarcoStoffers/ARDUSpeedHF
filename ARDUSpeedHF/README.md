@@ -7,6 +7,7 @@ This was the first Sketch to control a brushed Motor via a cheap brushless ESC f
 ## Requirement
 - You need to attach an AVRISP to the microcontroller (Microchip ATmega8). This can be done via the available pins or via a chip-adapter.
 ![Hobbyking UBEC 20A Pinout](https://marcostoffers.github.io/hk20apinout.jpg)
+
 (Source: https://docs.google.com/spreadsheets/d/13tMlu5ldLNpZXwbe6UhDHJhcgTVuljm8HDiDp9WO9Pk/edit#gid=0) 
 - The hardware is not listed in the Arduino IDE. Therefore you need to install the "MiniCore" ( https://github.com/MCUdude/MiniCore ). There you can select the ATmega8 with 16MHz crystal
 
