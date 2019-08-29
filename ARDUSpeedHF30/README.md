@@ -2,7 +2,7 @@
 ## Arduino Sketch for the NoName 30A ESC für 3$
 ![Simonk30AESC](https://marcostoffers.github.io/simonk30a.png)
 
-This sketch is for the 30A, red wrapped ESC you can find on eBay or Aliexpress fpr around 3$. This ESC is a clone of the HobbyPower 30A ESC.
+This sketch is for the 30A, red wrapped ESC you can find on eBay or Aliexpress for around 3$. This ESC is a clone of the HobbyPower 30A ESC.
 
 ## Requirement
 - You need to attach an AVRISP to the microcontroller (Microchip ATmega8). This must be done via a programming clamp you can find here: https://www.thingiverse.com/thing:1569874
