@@ -32,9 +32,9 @@ LiPo voltages:
 * 3S LiPo normal voltage = 11.1V
 * 3S LiPo cutoff voltage = 9.9V
 
-* 3S LiPo fully charged = 16.8V
-* 3S LiPo normal voltage = 14.8V
-* 3S LiPo cutoff voltage = 13.2V
+* 4S LiPo fully charged = 16.8V
+* 4S LiPo normal voltage = 14.8V
+* 4S LiPo cutoff voltage = 13.2V
  
 ## License
 The project is licensed under the Creative Common License. A rebuild for private or non-profit associations is desired, commercial rebuild or distribution I forbid. If someone should develop the mixer further, I ask for the naming of the original project.
