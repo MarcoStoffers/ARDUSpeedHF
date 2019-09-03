@@ -30,6 +30,6 @@ LiPo voltages:
 * 3S LiPo cutoff voltage = 9.9V
  
 ## License
-The project is licensed under the Creative Common License. A rebuild for private or non-profit associations is desired, commercial rebuild or distribution I forbid. If someone should develop the mixer further, I ask for the naming of the original project.
+The project is licensed under the Creative Common License. A rebuild for private or non-profit associations is desired, commercial rebuild or distribution I forbid. If someone should develop this project further, I ask for the naming of the original project.
 
 ![CreativeCommonLicense](https://marcostoffers.github.io/cc.png)
