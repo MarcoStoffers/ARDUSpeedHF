@@ -5,7 +5,7 @@
 This sketch is for the 6A and 10A version of the HobbyKing UBEC ESC. This UBEC series of speed controller are available in different versions with different amps classified.
 
 ## Requirement
-- You need to attach an AVRISP to the microcontroller (Microchip ATmega8). This must be done via the available 1.27mm pads: 5V GND MOSI MISO SCK RST [EDIT) You can use the PogoPin adapter for this (see subfolder).
+- You need to attach an AVRISP to the microcontroller (Microchip ATmega8). This must be done via the available 1.27mm pads: 5V GND MOSI MISO SCK RST [EDIT] You can use the PogoPin adapter for this (see subfolder).
 - The hardware is not listed in the Arduino IDE. Therefore you need to install the "MiniCore" ( https://github.com/MCUdude/MiniCore ). There you can select the ATmega8 with 16MHz crystal
 
 ## Setup
