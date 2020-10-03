@@ -3,6 +3,7 @@
 ![XXDHW30A](https://marcostoffers.github.io/XXDHW30A.png)
 
 This sketch is for the XXD HW30A ESC from Banggood.com ( https://www.banggood.com/Wholesale-XXD-HW30A-30A-Brushless-Motor-ESC-For-Airplane-Quadcopter-p-50621.html?rmmds=search&cur_warehouse=CN )
+
 Due to the Hardware setup, I can use the build in Hardware-PWM to drive the Motor. This results in a 18kHz PWM frequency which is not hearable!
 
 ## Requirement
