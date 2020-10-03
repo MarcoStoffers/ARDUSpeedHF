@@ -1,4 +1,4 @@
-![ARDUSpeedHF](https://marcostoffers.github.io/arduspeedhfNGlogo640.jpg)
+![ARDUSpeedHF](https://marcostoffers.github.io/arduspeedhfNGlogo640.png)
 ## Arduino based Sketch for some Brushless ESC from China to control a brushed Motor
 
 ARDUSpeedHF is an Arduino Sketch, working on Arduino IDE 1.8.5+ to flash a brushless ESC from China to a brushed ESC. There are more versions available for different kind of ESC Hardware. So please have a look into the folders!
