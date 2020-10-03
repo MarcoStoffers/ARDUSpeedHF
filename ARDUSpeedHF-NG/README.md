@@ -15,10 +15,10 @@ The microcontroller ATmega8 is powered via an old 78L05 LDO. This type needs mor
 
 ## Hardware Changes
 To use the ESC with your brushed Motor (DC Motor) you need to remove the left Motor cable from the PCB to avoid shorts:
-![Removed cable](https://marcostoffers.github.io/XXDHW30A.png)
+![Removed cable](https://marcostoffers.github.io/XXDHW30A-noleads.png)
 
 To get a better cooling when a heatshrink tube is used, you can use small RAM cooler with self-adhesife back:
-![Add cooling](https://marcostoffers.github.io/XXDHW30A.png)
+![Add cooling](https://marcostoffers.github.io/XXDHW30A-cooling.png)
 
 ## Setup
 To setup the new programmed ESC to your RC you need to do the following steps:
