@@ -1,17 +1,17 @@
 ![ARDUSpeedHF](https://marcostoffers.github.io/arduspeedhfNGlogo640.png)
 ## Arduino Sketch for the XXD HW30A ESC
-![Simonk30AESC](https://marcostoffers.github.io/simonk30a.png)
+![Simonk30AESC](https://marcostoffers.github.io/XXDHW30A.png)
 
 This sketch is for the XXD HW30A ESC from Banggood.com ( https://www.banggood.com/Wholesale-XXD-HW30A-30A-Brushless-Motor-ESC-For-Airplane-Quadcopter-p-50621.html?rmmds=search&cur_warehouse=CN )
+Due to the Hardware setup, I can use the build in Hardware-PWM to drive the Motor. This results in a 18kHz PWM frequency which is not hearable!
 
 ## Requirement
-- You need to attach an AVRISP to the microcontroller (Microchip ATmega8). This must be done via a programming clamp you can find here: https://www.thingiverse.com/thing:1569874
-- The hardware is not listed in the Arduino IDE. Therefore you need to install the "MiniCore" ( https://github.com/MCUdude/MiniCore ). There you can select the ATmega8 with 8MHz internal
+- You need to install Arduino IDE version 1.8.12 or higher
+- The hardware is not listed in the Arduino IDE. Therefore you need to install the "MiniCore" ( https://github.com/MCUdude/MiniCore ). There you can select the ATmega8 with internal 8MHz. Please see complete settings in the Sketch.
+- You need to attach an AVRISP to the microcontroller (Microchip ATmega8). This can be done by soldering wires to it or to use special programming adapters (very rare).
 
 ## Attention
-The microcontroller ATmega8 is powered via an old 78L05 LDO. This type needs more than 6.7V (better 7V) to generate the 5V for the ATmega. So if you want to power the system with a 2S LiPo, be sure to use an external LiPo monitor, because the LDO will break down the voltage before the LiPo reaches the cut off voltage! You can change this by using a better LDO in SOT-89 housing (f.e. LD2981ABU50TR)
-
-[EDIT] See new version 0.2 where I use the internal 2.56V voltage reference for the ADC. This is a little bit more stable and so a working LiPo cutoff for 2S.
+The microcontroller ATmega8 is powered via an old 78L05 LDO. This type needs more than 6.7V (better 7V) to generate the 5V for the ATmega. So if you want to power the system with a 2S LiPo, better use a different LDO f.e. LE50CD-TR which is pin compatible. 
 
 ## Setup
 To setup the new programmed ESC to your RC you need to do the following steps:
@@ -23,16 +23,16 @@ To setup the new programmed ESC to your RC you need to do the following steps:
 * decide if you want LiPo protect On or Off (2S -3S). For LiPo protect on bring the stick to full forward, for off to full reverse - wait for a beep
 * bring the stick in the middle position. You will here 2 long Motorbeeps as a sign, that all values are stored in the internal EEPROM.
 
-You can now use your new brushed ESC (no reboot required).
+You can now use your new brushed ESC (no reboot required). In LiPo Mode, the ESC will beep the number of LiPo cells during startup.
 
 LiPo voltages:
 * 2S LiPo fully charged = 8.4V
-* 2S LiPo normal voltage = 7.4V
-* 2S LiPo cutoff voltage = 6.6V
+* 2S LiPo slow down voltage = 6.6V (only 50% throttle)
+* 2S LiPo cutoff voltage = 6.0V
 
 * 3S LiPo fully charged = 12.6V
-* 3S LiPo normal voltage = 11.1V
-* 3S LiPo cutoff voltage = 9.9V
+* 3S LiPo slow down voltage = 9.9V (only 50% throttle)
+* 3S LiPo cutoff voltage = 9.0V
  
 ## License
 The project is licensed under the Creative Common License. A rebuild for private or non-profit associations is desired, commercial rebuild or distribution I forbid. If someone should develop this project further, I ask for the naming of the original project.
