@@ -12,7 +12,7 @@ This sketch is for the XXD HW30A ESC from Banggood.com ( https://www.banggood.co
 - You need to attach an AVRISP to the microcontroller (Microchip ATmega8). This can be done by soldering wires to it or to use special programming adapters (very rare).
 
 ## Attention
-The microcontroller ATmega8 is powered via an old 78L05 LDO. This type needs more than 6.7V (better 7V) to generate the 5V for the ATmega. So if you want to power the system with a 2S LiPo, better use a different LDO f.e. LE50CD-TR which is pin compatible. 
+The microcontroller ATmega8 is powered via an old 78L05 LDO. This type needs more than 6.7V (better 7V) to generate the 5V for the ATmega. So if you want to power the system with a 2S LiPo, better use a different LDO f.e. LE50CD-TR or LM2931AD-5.0R2G which are pin compatible. 
 
 ## Hardware Changes
 To use the ESC with your brushed Motor (DC Motor) you need to remove the left Motor cable from the PCB to avoid shorts:
