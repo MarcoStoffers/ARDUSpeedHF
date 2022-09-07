@@ -34,6 +34,7 @@
 **      - change LiPo limit to 3.3V per cell
 **      - change LiPo cut off to 3.0V per cell
 ** 0.4: - add documentation
+** 0.5: - add User defines for RCmin and RCmax
 ** =======================================================================
 **
 ** Startup: 
@@ -92,8 +93,11 @@
 // -----------------------------
 // User-defines
 // -----------------------------
-#define Hysterese_for 50       // Hysterese for stick from middle position to motor starts forward (deadzone of stick)
-#define Hysterese_rev 50       // Hysterese for stick from middle position to motor starts reverse (deadzone of stick)
+#define Hysterese_for 50        // Hysterese for stick from middle position to motor starts forward (deadzone of stick)
+#define Hysterese_rev 50        // Hysterese for stick from middle position to motor starts reverse (deadzone of stick)
+
+#define RCmin 900               // Value for RCmin - please change accordingly to your needs
+#define RCmax 2100              // Value for RCmax - please change accordingly to your needs
 
 // -----------------------------
 // System-defines
@@ -177,10 +181,10 @@ void setup() {
     learn_middle();                                                                               // learn stick middle and setup min & max if wanted
     
     rc_max = eeprom_read_word((uint16_t*)1);                                                      // read EEPROM value for RC max
-    if(!between(rc_max, 900, 2100)) rc_max = 2000;                                                // and check if valid
+    if(!between(rc_max, RCmin, RCmax)) rc_max = 2000;                                             // and check if valid
     
     rc_min = eeprom_read_word((uint16_t*)3);                                                      // read EEPROM value for RC min
-    if(!between(rc_min, 900, 2100)) rc_min = 1000;                                                // and check if valid
+    if(!between(rc_min, RCmin, RCmax)) rc_min = 1000;                                             // and check if valid
 
     if(eeprom_read_byte((uint8_t*)5) == 1) reverse_half = true;                                   // check if reverse limit is set and set reverse value to 50%
     
@@ -291,7 +295,7 @@ void learn_middle() {
          delay(80);
     }
     rc_middle = rc_middle / 10;                                                                   // devide rc_middle by 10 to get average
-    if(!between(rc_middle, 900, 2100)) rc_ok = false;                                             // check if value is in range
+    if(!between(rc_middle, RCmin, RCmax)) rc_ok = false;                                          // check if value is in range
 }
 
 // -----------------------------
@@ -456,7 +460,7 @@ void RC_Interrupt() {
     }
     
     // check if value is correct
-    if(between(rc_value, 900, 2100)) rc_ok = true;                                                // last check if RC signal is in range
+    if(between(rc_value, RCmin, RCmax)) rc_ok = true;                                             // last check if RC signal is in range
     else rc_ok = false;
   }
 }
